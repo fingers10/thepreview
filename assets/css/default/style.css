@@ -113,8 +113,7 @@ body {
 .site-header .page-section-title {
   font-size: 3em;
   font-family: var(--font-family-sans-serif);
-/*   font-weight: 200; */
-  font-weight: 600;
+  font-weight: 200;
 }
 
 .site-header .page-section-text {
