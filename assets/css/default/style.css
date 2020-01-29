@@ -44,6 +44,10 @@
   --purple: #533777;
 
   /* Page Variables */
+  --tango: #f47829;
+  --ghost: #ccd1d8;
+  --black: #000000;
+  --gray: #929292;
   --light-blue: #e1f7f5;
   --light-purple: #c290d2;
 /*   --font-family-serif: Merriweather, serif; */
@@ -101,7 +105,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .site-nav .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.9);
+/*     background-color: rgba(0, 0, 0, 0.9); */
+    background-color: var(--black);
     padding: 10px;
   }
 }
@@ -134,7 +139,8 @@ body {
   height: 2px;
   left: 0;
   bottom: 0;
-  background-color: var(--yellow);
+/*   background-color: var(--yellow); */
+  background-color: var(--tango);
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-out;
@@ -183,4 +189,27 @@ body {
 
 .layout-social .layout-icon {
   font-size: 2em;
+}
+
+/* Color overrides */
+
+.bg-secondary {
+  background-color: var(--gray) !important;
+}
+
+.bg-dark {
+  background-color: var(--black) !important;
+}
+
+.btn-dark {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.navbar-toggler:focus {
+  border-color: var(--tango);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: 600;
 }
