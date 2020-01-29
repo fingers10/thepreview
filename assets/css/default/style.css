@@ -109,6 +109,10 @@ body {
     background-color: var(--black);
     padding: 10px;
   }
+  
+  .site-nav .nav-link {
+    color: var(--light) !important;
+  }
 }
 
 .site-header .layout-hero {
@@ -206,10 +210,21 @@ body {
   border-color: var(--black);
 }
 
+.navbar-toggler {
+  border-color: var(--white) !important;
+  font-weight: 600 !important;
+}
+
 .navbar-toggler:focus {
   border-color: var(--tango);
 }
 
 .navbar-dark .navbar-nav .nav-link {
   font-weight: 600;
+  color: black;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-transform: capitalize;
 }
