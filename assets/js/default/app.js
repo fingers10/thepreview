@@ -1,5 +1,5 @@
 $(function () {
-    var scrolloffset = 55; //variable for menu height
+    var scrolloffset = 50; //variable for menu height
 
     // When Scrollspy Detects a change
     $(window).on('activate.bs.scrollspy', function () {
