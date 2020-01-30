@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300|Source+Sans+Pro:200,400,600');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,600&display=swap');
 
 :root {
   /* 
@@ -30,11 +30,11 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
 
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-nunito-sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 */
   /* Override Variables */
-  --font-family-sans-serif: 'Source Sans Pro', -apple-system,
+  --font-family-nunito-sans: 'Nunito Sans', sans-serif, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
@@ -42,27 +42,20 @@
   --purple: #533777;
 
   /* Page Variables */
+  --tango: #f47829;
+  --ghost: #ccd1d8;
+  --black: #000000;
+  --gray: #929292;
   --light-blue: #e1f7f5;
   --light-purple: #c290d2;
-  --font-family-serif: Merriweather, serif;
+  --font-family-serif: 'Nunito Sans', serif;
   --color-text: var(--gray-dark);
   --font-family-text: var(--font-family-serif);
 }
 
 .family-sans {
-  font-family: var(--font-family-sans-serif);
+  font-family: var(--font-family-nunito-sans);
 }
-
-/* .icon {
-  display: inline-block;
-  font-size: inherit;
-  overflow: visible;
-  vertical-align: -0.125;
-  text-rendering: auto;
-  fill: gray !important;
-  width: 50px;
-  height: 50px;
-} */
 
 .animated {
   visibility: visible !important;
@@ -87,7 +80,8 @@ body {
 }
 
 .layout-text {
-  font-size: 1.1em;
+  font-size: 0.875em;
+  font-weight: 400;
 }
 
 .site-nav.inbody {
@@ -96,8 +90,12 @@ body {
 
 @media screen and (max-width: 768px) {
   .site-nav .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--black);
     padding: 10px;
+  }
+  
+  .site-nav .nav-link {
+    color: var(--light) !important;
   }
 }
 
@@ -107,7 +105,7 @@ body {
 
 .site-header .page-section-title {
   font-size: 3em;
-  font-family: var(--font-family-sans-serif);
+  font-family: var(--font-family-nunito-sans);
   font-weight: 200;
 }
 
@@ -129,7 +127,7 @@ body {
   height: 2px;
   left: 0;
   bottom: 0;
-  background-color: var(--yellow);
+  background-color: var(--tango);
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-out;
@@ -150,28 +148,55 @@ body {
 }
 
 .page-section-header .page-section-title {
-  font-size: 4em;
-  font-family: var(--font-family-sans-serif);
-  font-weight: 200;
-  color: var(--purple);
+  font-size: 2.5em;
+  font-family: var(--font-family-nunito-sans);
+  font-weight: 400;
 }
 
 .page-section-header .page-section-text {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 200;
 }
 
-.layout-media .layout-image {
-  max-width: 200px;
-}
-
-.layout-media .layout-title {
-  color: var(--purple);
-  font-family: var(--font-family-sans-serif);
-  font-weight: 200;
-  font-size: 1.6em;
+.layout-title {
+  font-family: var(--font-family-nunito-sans);
+  font-size: 1.5em;
 }
 
 .layout-social .layout-icon {
   font-size: 2em;
+}
+
+/* Color overrides */
+
+.bg-secondary {
+  background-color: var(--gray) !important;
+}
+
+.bg-dark {
+  background-color: var(--black) !important;
+}
+
+.btn-dark {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.navbar-toggler {
+  border-color: var(--white) !important;
+  font-weight: 600 !important;
+}
+
+.navbar-toggler:focus {
+  border-color: var(--tango);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: 600;
+  color: black;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-transform: capitalize;
 }
