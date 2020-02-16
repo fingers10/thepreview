@@ -88,6 +88,11 @@ body {
   background: var(--secondary);
 }
 
+.site-nav .navbar-nav .nav-link.active,
+.site-nav .navbar-nav .nav-link:hover {
+  color: var(--dark) !important;
+}
+
 @media screen and (max-width: 768px) {
   .site-nav .navbar-collapse {
     background-color: var(--black);
@@ -167,6 +172,10 @@ body {
   font-size: 2em;
 }
 
+.layout-social .layout-icon:hover {
+  color: var(--black);
+}
+
 /* Color overrides */
 
 .bg-secondary {
@@ -191,12 +200,21 @@ body {
   border-color: var(--tango);
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.site-nav .nav-link {
   font-weight: 600;
-  color: black;
+  color: var(--gray);
 }
 
 .navbar-brand {
   font-weight: 700;
   text-transform: capitalize;
+}
+
+.text-tango {
+  color: var(--tango)
+}
+
+.btn-tango {
+  background-color: var(--tango);
+  color: var(--white);
 }
