@@ -229,7 +229,29 @@ body {
   color: var(--white);
 }
 
+.btn-outline-tango {
+  background-color: var(--white);
+  border-color: var(--tango);
+}
+
 .border-tango {
   border-color: var(--tango) !important;
   border: 1px solid;;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: none;
+  z-index: 5;
+}
+
+.back-to-top img {
+  height: 40px;
+  width: 40px;
+}
+
+.back-to-top:focus {
+  box-shadow: none;
 }

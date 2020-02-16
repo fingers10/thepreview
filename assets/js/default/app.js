@@ -47,7 +47,7 @@ $(function () {
     $('.navbar-brand').click(
         function (e) {
             e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     )
 
@@ -75,4 +75,19 @@ $(function () {
             } //click function
         }
     ); //smooth scrolling
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    }); // scroll to top
 }); // Make sure Document loaded
