@@ -37,11 +37,11 @@ $(function () {
     });
 
     // Modifies modal and injects high resolution image
-    $('#site-modal').on('show.bs.modal', function (event) {
-        $(this)
-            .find('.modal-content img')
-            .attr('src', $(event.relatedTarget).data('highres'));
-    });
+    // $('#site-modal').on('show.bs.modal', function (event) {
+    //     $(this)
+    //         .find('.modal-content img')
+    //         .attr('src', $(event.relatedTarget).data('highres'));
+    // });
 
     //Use smooth scrooling when clicking on brand
     $('.navbar-brand').click(
