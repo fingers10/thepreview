@@ -255,3 +255,8 @@ body {
 .back-to-top:focus {
   box-shadow: none;
 }
+
+.form-control:focus {
+  border-color: var(--tango) !important;
+  box-shadow: 0 0 0 0.2rem rgba(244, 120, 41, .25);
+}
