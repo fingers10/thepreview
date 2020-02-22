@@ -256,7 +256,9 @@ body {
   box-shadow: none;
 }
 
-.form-control:focus {
+.form-control:focus,
+.btn-tango:hover,
+.btn-tango:focus {
   border-color: var(--tango) !important;
-  box-shadow: 0 0 0 0.2rem rgba(244, 120, 41, .25);
+  box-shadow: 0 0 0 0.2rem rgba(244, 120, 41, .25) !important;
 }
