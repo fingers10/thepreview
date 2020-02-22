@@ -19,9 +19,9 @@ $(function () {
         // );
 
         // Animate Events Layout when it passes scroll
-        $('#page-events .animated-group').css(
-            'visibility: hidden;'
-        );
+        // $('#page-events .animated-group').css(
+        //     'visibility: hidden;'
+        // );
 
         // if (hash === '#page-media') {
         //     $('#page-media .animated-group').addClass(
@@ -29,11 +29,11 @@ $(function () {
         //     );
         // }
 
-        if (hash === '#page-events') {
-            $('#page-events .animated-group').addClass(
-                'animated zoomIn'
-            );
-        }
+        // if (hash === '#page-events') {
+        //     $('#page-events .animated-group').addClass(
+        //         'animated zoomIn'
+        //     );
+        // }
     });
 
     // Modifies modal and injects high resolution image
