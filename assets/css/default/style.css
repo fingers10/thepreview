@@ -224,6 +224,10 @@ body {
   color: var(--tango)
 }
 
+.text-tango:hover {
+  color: var(--black)
+}
+
 .btn-tango {
   background-color: var(--tango);
   color: var(--white);
@@ -261,4 +265,8 @@ body {
 .btn-tango:focus {
   border-color: var(--tango) !important;
   box-shadow: 0 0 0 0.2rem rgba(244, 120, 41, .25) !important;
+}
+
+.podcast-title {
+  font-size: 1.2rem;
 }
