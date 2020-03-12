@@ -68,7 +68,7 @@ body {
 }
 
 .site-header {
-  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7)), url(../../img/landing/hero.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../../img/landing/hero.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -102,7 +102,7 @@ body {
     /* background-color: var(--black); */
     padding: 10px;
   }
-  
+
   .site-nav .nav-link {
     color: var(--gray) !important;
   }
@@ -240,7 +240,7 @@ body {
 
 .border-tango {
   border-color: var(--tango) !important;
-  border: 1px solid;;
+  border: 1px solid;
 }
 
 .back-to-top {
@@ -269,4 +269,55 @@ body {
 
 .podcast-title {
   font-size: 1.2rem;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .embed-responsive-4by3::before {
+    padding-top: 55%;
+  }
+
+  .embed-responsive-1by1::before {
+    padding-top: 55%;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .embed-responsive-4by3::before {
+    padding-top: 50%;
+  }
+
+  .embed-responsive-1by1::before {
+    padding-top: 50%;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .embed-responsive-4by3::before {
+    padding-top: 35%;
+  }
+
+  .embed-responsive-1by1::before {
+    padding-top: 35%;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .embed-responsive-1by1::before {
+    padding-top: 77%;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .embed-responsive-4by3::before {
+    padding-top: 58%;
+  }
+
+  .embed-responsive-1by1::before {
+    padding-top: 58%;
+  }
 }
