@@ -5,3 +5,19 @@
     background-size: cover;
     height: 60vh;
   }
+
+.post-image,.post-list blockquote,.post-video {
+    margin-bottom: 1.875rem
+  }
+
+  .post-image-cover {
+    position: relative;
+    padding-top: 70%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.post-desc {
+  text-align: justify;
+}
