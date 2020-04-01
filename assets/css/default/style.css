@@ -48,6 +48,8 @@
   --gray: #929292;
   --light-blue: #e1f7f5;
   --light-purple: #c290d2;
+  --mine-shaft: #353535;
+  --nevada: #717274;
   --font-family-serif: 'Nunito Sans', serif;
   --color-text: var(--gray-dark);
   --font-family-text: var(--font-family-serif);
@@ -94,7 +96,7 @@ body {
 
 .site-nav .navbar-nav .nav-link.active,
 .site-nav .navbar-nav .nav-link:hover {
-  color: var(--dark) !important;
+  color: var(--mine-shaft) !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -157,19 +159,23 @@ body {
 }
 
 .page-section-header .page-section-title {
-  font-size: 2.5em;
+  font-size: 2rem;
   font-family: var(--font-family-nunito-sans);
   font-weight: 400;
+  color: var(--mine-shaft);
 }
 
 .page-section-header .page-section-text {
-  font-size: 1.5em;
+  font-size: 1.25rem;
   font-weight: 200;
+  text-align: center;
 }
 
 .layout-title {
   font-family: var(--font-family-nunito-sans);
-  font-size: 1.5em;
+  font-size: 1.125rem;
+  color: var(--nevada);
+  text-transform: uppercase;
 }
 
 .layout-social .layout-icon {
@@ -179,6 +185,11 @@ body {
 
 .layout-social .layout-icon:hover {
   color: var(--black);
+}
+
+.view-more {
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 /* Color overrides */
@@ -208,6 +219,7 @@ body {
 .site-nav .nav-link {
   font-weight: 600;
   color: var(--gray);
+  font-size: 1.125rem;
 }
 
 .navbar-brand {
@@ -267,8 +279,27 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(244, 120, 41, .25) !important;
 }
 
-.podcast-title {
+input[type="email"]::-webkit-input-placeholder { /* Edge */
+  font-style: italic;
   font-size: 1.2rem;
+}
+
+input[type="email"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+input[type="email"]::placeholder {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.podcast-title {
+  color: var(--mine-shaft);
+}
+
+.btn-view-more {
+  font-size: 0.875rem;
 }
 
 /* // Extra small devices (portrait phones, less than 576px) */
