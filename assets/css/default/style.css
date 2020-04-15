@@ -405,10 +405,13 @@ input[type="email"]::placeholder {
   border-radius: 200px !important;
 }
 
-.glider-dot,
 .glider-next,
 .glider-prev {
   border: 1px solid var(--tango);
+}
+
+.glider-dot {
+  border: 0;
 }
 
 .glider-dot {
