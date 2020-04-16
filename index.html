@@ -13,31 +13,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/lib/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/lib/animate/css/animate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="assets/css/default/style.css">
 
     <title>TheProdcast</title>
 </head>
 
-<body data-spy="scroll" data-target=".site-nav" data-offset="55">
+<body data-spy="scroll" data-target=".site-nav" data-offset="100">
 
     <header id="page-hero" class="site-header">
 
-        <section class="layout-hero d-flex align-items-center text-light text-center">
+        <section class="layout-hero d-flex align-items-center text-light">
             <div class="container py-4">
                 <div class="row justify-content-center pt-5">
                     <div class="col-11 col-sm-10 col-md-8 animated fadeInUp">
-                        <img class="layout-image img-fluid rounded" src="assets/img/icons/brand-banner-color.svg"
-                            alt="banner image">
+                        <!-- <img class="layout-image img-fluid rounded" src="assets/img/icons/brand-banner-color.svg"
+                            alt="banner image"> -->
+                        <p class="text-danger banner-title h1">THE <br> PRODCAST</p>
                     </div>
-                    <!-- <input type="search" class="form-control" placeholder="search" /> -->
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-11 col-sm-10 col-md-8 animated fadeInUp">
-                        <!-- <h3 class="page-section-title">THE PRODCAST</h3> -->
-                        <p class="page-section-text">Simple, compelling, and fun—this is how we at The Prodcast made
-                            product learning to be. Here’s the content-rich platform with interesting product stories
-                            and podcasts that feature the stars behind stellar products. Whether you’re an enthusiast or
-                            a full-time geek—level up your career and product skills by leveraging our knowledge.
+                        <p class="page-section-text">Here’s the content-rich platform with interesting product stories
+                            and podcasts that feature the stars behind stellar products.
                         </p>
                     </div>
                 </div>
@@ -52,7 +50,7 @@
             <a class="navbar-brand text-tango" href="#page-hero">
                 <img class="img-fluid" src="assets/img/icons/brand-logo.svg" alt="brand logo"></a>
 
-            <button type="button" class="navbar-toggler border-tango" data-toggle="collapse" data-target="#myTogglerNav"
+            <button type="button" class="navbar-toggler border-0" data-toggle="collapse" data-target="#myTogglerNav"
                 aria-controls="myTogglerNav" aria-label="Toggle Navigation">
                 <i class="fas fa-bars text-tango"></i>
             </button>
@@ -60,9 +58,10 @@
             <section class="collapse navbar-collapse" id="myTogglerNav">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-item nav-link" href="#page-podcasts">podcasts</a>
+                    <a class="nav-item nav-link" href="#page-jobs">jobs</a>
                     <a class="nav-item nav-link" href="#page-blogs">blogs</a>
                     <!-- <a class="nav-item nav-link" href="#page-videos">videos</a> -->
-                    <a class="nav-item nav-link" href="#page-contact">reach out</a>
+                    <!-- <a class="nav-item nav-link" href="#page-contact">reach out</a> -->
                     <!-- <a class="nav-item nav-link" href="#page-events">events</a>
                     <a class="nav-item nav-link" href="#page-gallery">gallery</a> -->
                 </div>
@@ -72,25 +71,54 @@
     </nav>
 
     <article id="page-podcasts" class="page-section vertical-padding">
-        <header class="page-section-header container">
-            <h2 class="page-section-title display-4 pt-4 text-center">Podcasts</h2>
-            <p class="page-section-text mx-md-5">Every week, get to listen to a special guest who not only has extensive
-                product
-                knowledge but also some exciting stories to share with the listeners. Watch out for our array of amazing
-                storytellers!</p>
-        </header>
+        <section class="container">
+            <div class="row justify-content-md-start">
+                <div class="col-lg-6">
+                    <h3 class="layout-title mb-25 mb-30">Latest Podcasts</h3>
+                    <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="240" width="100%"
+                        src="https://open.spotify.com/embed-podcast/episode/7kQHayQpucScDo3ZoaTB4m"></iframe>
+                    <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="240" width="100%"
+                        src="https://open.spotify.com/embed-podcast/episode/7kQHayQpucScDo3ZoaTB4m"></iframe>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex justify-content-between align-items-center mt-2 mt-md-0 mb-25 mb-30">
+                        <h3 class="layout-title mb-0">Most Popular Podcasts</h3>
+                        <small>
+                            <a class="text-tango view-more" href="https://open.spotify.com/show/0u6NNu3ZyZHyn888FD3WdE"
+                                target="_blank">
+                                + View more
+                            </a>
+                        </small>
+                    </div>
+                    <section class="mt-2">
+                        <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="155"
+                            width="100%"
+                            src="https://open.spotify.com/embed-podcast/episode/7kQHayQpucScDo3ZoaTB4m"></iframe>
+                        <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="155"
+                            width="100%"
+                            src="https://open.spotify.com/embed-podcast/episode/7kQHayQpucScDo3ZoaTB4m"></iframe>
+                        <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="155"
+                            width="100%"
+                            src="https://open.spotify.com/embed-podcast/episode/7kQHayQpucScDo3ZoaTB4m"></iframe>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </article>
 
+    <!-- <article id="page-podcasts" class="page-section vertical-padding">
         <section class="container py-4">
             <div class="row justify-content-md-start">
                 <div class="col-lg-5">
-                    <h3 class="layout-title">Latest Podcasts</h3>
+                    <h3 class="layout-title mb-25 mb-30">Latest Podcasts</h3>
                     <section class="card my-3 shadow-sm">
                         <div class="embed-responsive embed-responsive-4by3">
                             <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="200"
-                                src="https://open.spotify.com/embed-podcast/episode/6uOMt3uMAsym1k9FIlkJjR"></iframe>
+                                src="https://open.spotify.com/embed-podcast/episode/7kQHayQpucScDo3ZoaTB4m"></iframe>
                         </div>
                         <div class="card-body">
-                            <h4 class="layout-title card-title podcast-title">Episode 25 : Leading technology platforms and empowering
+                            <h4 class="layout-title card-title podcast-title">Episode 25 : Leading technology platforms
+                                and empowering
                                 communities</h4>
                             <p class="layout-text card-text text-justify">
                                 Technology platforms today are led by determined women leaders, who not only take care
@@ -102,13 +130,12 @@
 
                 </div>
                 <div class="col-lg-7">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="layout-title">Most Popular Podcasts</h3>
+                    <div class="d-flex justify-content-between align-items-center mb-25 mb-30">
+                        <h3 class="layout-title mb-0">Most Popular Podcasts</h3>
                         <small>
-                            <a class="text-tango view-more" href="https://open.spotify.com/show/0u6NNu3ZyZHyn888FD3WdE"
-                                target="_blank">
-                                View
-                                more...
+                            <a class="text-tango view-more font-weight-bold"
+                                href="https://open.spotify.com/show/0u6NNu3ZyZHyn888FD3WdE" target="_blank">
+                                + View more
                             </a>
                         </small>
                     </div>
@@ -117,9 +144,9 @@
                             <div class="row no-gutters">
                                 <div class="col-12 col-lg-5">
                                     <div class="embed-responsive embed-responsive-1by1">
-                                        <iframe allow="encrypted-media" allowtransparency="true" frameborder="0"
-                                            height="300"
-                                            src="https://open.spotify.com/embed-podcast/episode/2DVtrLbb7treKbhbL4UlC9"></iframe>
+                                        <iframe id="testframe" allow="encrypted-media" allowtransparency="true"
+                                            frameborder="0" height="300"
+                                            src="https://open.spotify.com/embed-podcast/episode/7kQHayQpucScDo3ZoaTB4m"></iframe>
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-7">
@@ -129,7 +156,8 @@
                                             24: Product Manager aka Innovation Manager
                                         </p>
                                         <p class="card-text layout-text mt-1 mb-0">
-                                            Interview with Spondon Hazarika, Senior Product Manager at Verizon innovation labs.
+                                            Interview with Spondon Hazarika, Senior Product Manager at Verizon
+                                            innovation labs.
                                         </p>
                                         <p class="card-text layout-text">
                                             <small class="text-muted">
@@ -200,63 +228,159 @@
                 </div>
             </div>
         </section>
+    </article> -->
+
+    <article id="page-jobs" class="page-section vertical-padding">
+        <section class="container pb-4">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h3 class="layout-title mb-25 mb-30">JOBS</h3>
+                </div>
+                <div class="col-12 col-md-5 text-center d-flex">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Employers</h3>
+                            <p class="card-text">TheProdcast aligns with organizations that foster diverse and inclusive
+                                work cultures. We promote our job board via our weekly newsletter and in our Facebook
+                                Community.</p>
+                            <a href="#" class="btn btn-md btn-tango text-uppercase">Post a Job</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 text-center mt-4 mt-md-0 d-flex">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Job Seekers</h3>
+                            <p class="card-text">Looking for your next product role? Identify your next career move with
+                                an organization that
+                                shares our mission to support women product managers. Select your career level to find
+                                openings
+                                across the globe. </p>
+                            <!-- <div class="d-flex flex-column flex-md-row justify-content-around bg-tango-light">
+                                <div class="py-1"><a class="text-dark text-uppercase font-weight-normal" href="#">Early
+                                        career</a></div>
+                                <div class="d-none d-md-block py-1 text-tango font-weight-normal">|</div>
+                                <div class="py-1"><a class="text-dark text-uppercase font-weight-normal"
+                                        href="#">Mid-career</a></div>
+                                <div class="d-none d-md-block py-1 text-tango font-weight-normal">|</div>
+                                <div class="py-1"><a class="text-dark text-uppercase font-weight-normal"
+                                        href="#">Senior/Leadership</a></div>
+                            </div> -->
+                            <ul class="list-group list-group-horizontal-md justify-content-center bg-tango-light">
+                                <li
+                                    class="list-group-item bg-tango-light btn-outline-tango py-1 border-left-0 border-top-0 border-bottom-0">
+                                    <a class="text-dark" href="#">Early
+                                        career</a>
+                                </li>
+                                <li
+                                    class="list-group-item bg-tango-light btn-outline-tango py-1 border-top-0 border-bottom-0 border-left-0">
+                                    <a class="text-dark" href="#">Mid-career</a></li>
+                                <li class="list-group-item bg-tango-light btn-outline-tango py-1 border-0"><a class="text-dark"
+                                        href="#">Senior/Leadership</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </article>
 
-    <article id="page-blogs" class="page-section vertical-padding bg-light">
-        <header class="page-section-header container">
+    <article id="page-blogs" class="page-section vertical-padding">
+        <!-- <header class="page-section-header container">
             <h2 class="page-section-title display-4 pt-4 text-center">Blogs</h2>
             <p class="page-section-text mx-md-5">Fill in your product knowledge treasury by reading the short articles,
                 checklists, and know-hows that we curate for you.</p>
-        </header>
+        </header> -->
 
-        <section class="container py-4">
+        <section class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="layout-title">Recent Blogs</h3>
-                        <small><a class="text-tango view-more" href="blogs/index.html">View more...</a></small>
+                    <div class="d-flex justify-content-between align-items-center mb-25 mb-30">
+                        <h3 class="layout-title">THEPRODCAST BLOG</h3>
+                        <small><a class="text-tango view-more" href="blogs/index.html">+ View
+                                more</a></small>
                     </div>
 
-                    <div class="card-deck mb-4">
+                    <div class="card-deck mb-4 glider">
                         <div class="card shadow-sm">
                             <img src="assets/img/blogs/5.jpg" class="layout-image card-img-top img-fluid"
                                 alt="Product Market Fit">
                             <div class="card-body">
-                                <h5 class="layout-title card-title">Product Market Fit</h5>
-                                <p class="layout-text card-text text-justify">If you’re into building, designing,
-                                    marketing, launching, or selling new products, the term product-market fit is a
-                                    no-brainer. Well, not to say that it’s easy, for it’s something that’s easier said
-                                    than done. Put in simple terms, the so-called ‘fit’ is the product’s ability to meet
-                                    the market i.e. customers’ demands.</p>
-                                <a href="blogs/5.html" class="btn btn-sm btn-tango btn-view-more text-uppercase">View More</a>
+                                <h5 class="card-title h6"><a href="blogs/5.html"
+                                        class="text-dark stretched-link">Product Market Fit</a></h5>
                             </div>
+                            <!-- <div class="card-footer bg-white border-top-0 text-right">
+                                <a href="blogs/5.html" class="stretched-link"></a>
+                            </div> -->
                         </div>
                         <div class="card shadow-sm">
                             <img src="assets/img/blogs/4.jpg" class="layout-image card-img-top img-fluid"
                                 alt="Product Launch Checklist">
                             <div class="card-body">
-                                <h5 class="layout-title card-title">Product Launch Checklist</h5>
-                                <p class="layout-text card-text text-justify">Customers, positioning, go-to-market
-                                    strategy, revenue—are these buzzwords giving you a challenging time? Not anymore!
-                                    Product marketing is an important aspect of launching a product, and getting it
-                                    right means stitching together different technology and content processes.
-                                </p>
-                                <a href="blogs/4.html" class="btn btn-sm btn-tango btn-view-more text-uppercase">View More</a>
+                                <h5 class="card-title h6">Product Launch Checklist</h5>
                             </div>
+                            <!-- <div class="card-footer bg-white border-top-0 text-right">
+                                <a href="blogs/4.html" class="stretched-link"></a>
+                            </div> -->
                         </div>
                         <div class="card shadow-sm">
                             <img src="assets/img/blogs/3.jpg" class="layout-image card-img-top img-fluid"
                                 alt="Books to read to become Product Manager">
                             <div class="card-body">
-                                <h5 class="layout-title card-title">Books to read to become Product Manager</h5>
-                                <p class="layout-text card-text text-justify">If you chance upon every second person in
-                                    a crowd, you can definitely hear their best past-time to be reading. It’s definitely
-                                    not surprising, but every individual has an innate quality to consume information
-                                    through reading.</p>
-                                <a href="blogs/3.html" class="btn btn-sm btn-tango btn-view-more text-uppercase">View More</a>
+                                <h5 class="card-title h6">Books to read to become Product Manager</h5>
                             </div>
+                            <!-- <div class="card-footer bg-white border-top-0 text-right">
+                                <a href="blogs/3.html" class="stretched-link"></a>
+                            </div> -->
+                        </div>
+                        <div class="card shadow-sm">
+                            <img src="assets/img/blogs/3.jpg" class="layout-image card-img-top img-fluid"
+                                alt="Books to read to become Product Manager">
+                            <div class="card-body">
+                                <h5 class="card-title h6">Books to read to become Product Manager</h5>
+                            </div>
+                            <!-- <div class="card-footer bg-white border-top-0 text-right">
+                                <a href="blogs/3.html" class="stretched-link"></a>
+                            </div> -->
+                        </div>
+                        <div class="card shadow-sm">
+                            <img src="assets/img/blogs/3.jpg" class="layout-image card-img-top img-fluid"
+                                alt="Books to read to become Product Manager">
+                            <div class="card-body">
+                                <h5 class="card-title h6">Books to read to become Product Manager</h5>
+                            </div>
+                            <!-- <div class="card-footer bg-white border-top-0 text-right">
+                                <a href="blogs/3.html" class="stretched-link"></a>
+                            </div> -->
+                        </div>
+                        <div class="card shadow-sm">
+                            <img src="assets/img/blogs/3.jpg" class="layout-image card-img-top img-fluid"
+                                alt="Books to read to become Product Manager">
+                            <div class="card-body">
+                                <h5 class="card-title h6">Books to read to become Product Manager</h5>
+                            </div>
+                            <!-- <div class="card-footer bg-white border-top-0 text-right">
+                                <a href="blogs/3.html" class="stretched-link"></a>
+                            </div> -->
+                        </div>
+                        <div class="card shadow-sm">
+                            <img src="assets/img/blogs/3.jpg" class="layout-image card-img-top img-fluid"
+                                alt="Books to read to become Product Manager">
+                            <div class="card-body">
+                                <h5 class="card-title h6">Books to read to become Product Manager</h5>
+                            </div>
+                            <!-- <div class="card-footer bg-white border-top-0 text-right">
+                                <a href="blogs/3.html" class="stretched-link"></a>
+                            </div> -->
                         </div>
                     </div>
+                    <button role="button" aria-label="Previous"
+                        class="btn btn-icon btn-circle btn-tango btn-outline-tango glider-prev d-none d-sm-block"><i
+                            class="fas fa-chevron-left text-tango"></i></button>
+                    <button role="button" aria-label="Next"
+                        class="btn btn-icon btn-circle btn-tango btn-outline-tango glider-next d-none d-sm-block"><i
+                            class="fas fa-chevron-right text-tango"></i></button>
+                    <div role="tablist" class="dots"></div>
                 </div>
             </div>
         </section>
@@ -329,24 +453,108 @@
 
     <article id="page-subscribe" class="page-section vertical-padding">
 
-        <header class="page-section-header container">
+        <!-- <header class="page-section-header container">
             <h2 class="page-section-title display-4 pt-4 text-center">Great learning, right in your inbox</h2>
-        </header>
+        </header> -->
 
-        <section class="container-fluid py-4">
+        <section class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12">
+                    <p class="h2 text-center subscribe-title">Great learning, right in your inbox</p>
                     <p class="layout-text text-center">Podcasts, articles, and videos—we’ll give you the perfect mix .
                         Subscribe to get notified about our episodes and discussions.</p>
                 </div>
-                <div class="col-12 col-lg-6 animated-group">
-                    <div class="input-group input-group-lg">
-                        <input type="email" class="form-control" aria-label="Sizing example input"
-                            placeholder="your email here" aria-describedby="inputGroup-sizing-lg">
-                        <div class="input-group-append">
-                            <button class="btn btn-tango" type="button">Subscribe</button>
-                        </div>
+                <div class="col-12 col-lg-6 animated-group" id="sf33a841a2113c5ecaecdf2d32710c768544b5077c3a9b178f"
+                    data-type="signupform">
+                    <div name="SIGNUP_BODY">
+                        <form method="POST" id="zcampaignOptinForm" style="margin: 0px; width: 100%; padding: 0px 15px"
+                            action="https://maillist-manage.in/weboptin.zc" target="_zcSignup">
+
+                            <!-- <div class="input-group input-group-lg">
+                                <input type="email" class="form-control" aria-label="Sizing example input"
+                                    placeholder="your email here" aria-describedby="inputGroup-sizing-lg"
+                                    changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+                                <div class="input-group-append">
+                                    <button class="btn btn-tango text-uppercase" type="button"
+                                        name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin">Subscribe</button>
+                                </div>
+                            </div> -->
+                            <div class="d-flex flex-column flex-md-row">
+                                <input type="email" class="form-control" aria-label="Sizing example input"
+                                    placeholder="your email here" aria-describedby="inputGroup-sizing-lg"
+                                    changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+                                <button class="btn btn-tango text-uppercase w-50 align-self-center mt-2 mt-md-0" type="button" name="SIGNUP_SUBMIT_BUTTON"
+                                    id="zcWebOptin">Subscribe</button>
+                            </div>
+                            <div id="errorMsgDiv" class="bg-danger text-light p-2 text-center" style="display:none;">
+                                Please enter a valid email.
+                            </div>
+
+                            <input type="hidden" id="fieldBorder" value="">
+                            <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+                            <input type="hidden" id="emailReportId" name="emailReportId" value="">
+                            <input type="hidden" id="formType" name="formType" value="QuickForm">
+                            <input type="hidden" name="zx" id="cmpZuid" value="1df875aef8">
+                            <input type="hidden" name="zcvers" value="2.0">
+                            <input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+                            <input type="hidden" id="mode" name="mode" value="OptinCreateView">
+                            <input type="hidden" id="zcld" name="zcld" value="14fc310c7db938e">
+                            <input type="hidden" id="document_domain" value="">
+                            <input type="hidden" id="zc_Url" value="zc1.maillist-manage.in">
+                            <input type="hidden" id="new_optin_response_in" value="0">
+                            <input type="hidden" id="duplicate_optin_response_in" value="0">
+                            <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+                            <input type="hidden" id="zc_formIx" name="zc_formIx"
+                                value="33a841a2113c5ecaecdf2d32710c768544b5077c3a9b178f">
+                            <input type="hidden" id="viewFrom" value="URL_ACTION">
+                            <span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact
+                                Email,2</span>
+                        </form>
                     </div>
+                    <input type="hidden" id="signupFormType" value="QuickForm_Horizontal">
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+    <article id="page-available" class="page-section vertical-padding">
+
+        <!-- <header class="page-section-header container">
+            <h2 class="page-section-title display-4 pt-4 text-center">Great learning, right in your inbox</h2>
+        </header> -->
+
+        <section class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 align-self-center">
+                    <img class="img-fluid" src="assets/img/landing/showcase-devices-presentation.png">
+                </div>
+                <div class="col-12 col-md-6 align-self-center mt-4 mt-md-0">
+                    <h3 class="h5 text-center text-md-left">Now available on ...</h3>
+                    <!-- <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="">
+                            <img class="img-fluid" src="assets/img/landing/google@3x.png"></div>
+                        <div class=""><img class="img-fluid"
+                                src="assets/img/landing/apple@3x.png"></div>
+                        <div class=""><img class="img-fluid"
+                                src="assets/img/landing/spotify@3x.png"></div>
+                    </div> -->
+                    <ul class="list-group list-group-horizontal-md text-center text-md-left">
+                        <li class="list-group-item border-0 pl-md-0">
+                            <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9lYTJhMzEwL3BvZGNhc3QvcnNz"
+                                target="_blank">
+                                <img class="img-fluid" style="width:190px" src="assets/img/landing/google@3x.png"></a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="https://podcasts.apple.com/in/podcast/theprodcast/id1482634172" target="_blank">
+                                <img class="img-fluid" style="width:190px" src="assets/img/landing/apple@3x.png"></a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="https://open.spotify.com/show/0u6NNu3ZyZHyn888FD3WdE?si=4LBJCZOmSqauSCXSs1jBHQ"
+                                target="_blank">
+                                <img class="img-fluid" style="width:190px" src="assets/img/landing/spotify@3x.png"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -443,32 +651,13 @@
 
     </article> -->
 
-    <article id="page-contact" class="page-section vertical-padding bg-light">
+    <!-- <article id="page-contact" class="page-section vertical-padding">
 
         <header class="page-section-header container">
             <h2 class="page-section-title display-4 pt-4 text-center">Reach Out</h2>
         </header>
 
         <section class="container py-4">
-
-            <!-- <div class="row justify-content-center mb-4">
-                <div class="col-11 col-sm-10 col-md-8">
-                    <p class="layout-text text-justify">Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                        1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book.</p>
-                    <p class="layout-text text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.
-                        Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
-                    <p class="layout-text text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.
-                        Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book.</p>
-                </div>
-            </div> -->
 
             <div class="row justify-content-center mb-4">
                 <div class="col-12">
@@ -507,29 +696,32 @@
 
         </section>
 
-    </article>
+    </article> -->
 
-    <footer class="site-footer text-dark d-flex justify-content-center">
+    <footer class="site-footer d-flex justify-content-center border-top bg-dark">
 
         <div class="layout-social container py-5">
             <div class="row justify-content-between">
-                <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+                <div class="col-12 col-lg-3 mt-4 mt-lg-0 text-center text-md-left">
                     <img class="layout-image img-fluid rounded" src="assets/img/icons/brand-logo.svg"
                         alt="sample image">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between w-50 mx-auto ml-md-0">
                         <a class="text-tango layout-icon text-decoration-none"
                             href="https://www.facebook.com/TheProdcastt/">
-                            <i class="fab fa-facebook"></i>
+                            <!-- <i class="fab fa-facebook"></i> -->
+                            <img src="assets/img/landing/fb.svg">
                         </a>
                         <a class="text-tango layout-icon text-decoration-none"
                             href="https://twitter.com/TheProdcastt?s=08">
-                            <i class="fab fa-twitter"></i>
+                            <!-- <i class="fab fa-twitter"></i> -->
+                            <img src="assets/img/landing/twitter.svg">
                         </a>
                         <a class="text-tango layout-icon text-decoration-none"
                             href="https://www.linkedin.com/company/theprodcast/about/?viewAsMember=true">
-                            <i class="fab fa-linkedin"></i>
+                            <!-- <i class="fab fa-linkedin"></i> -->
+                            <img src="assets/img/landing/in.svg">
                         </a>
-                        <a class="text-tango layout-icon text-decoration-none"
+                        <!-- <a class="text-tango layout-icon text-decoration-none"
                             href="https://podcasts.apple.com/in/podcast/theprodcast/id1482634172">
                             <i class="fas fa-podcast"></i>
                         </a>
@@ -540,29 +732,34 @@
                         <a class="text-tango layout-icon text-decoration-none"
                             href="https://open.spotify.com/show/0u6NNu3ZyZHyn888FD3WdE?si=4LBJCZOmSqauSCXSs1jBHQ">
                             <i class="fab fa-spotify"></i>
-                        </a>
+                        </a> -->
                         <a class="text-tango layout-icon text-decoration-none"
                             href="https://www.instagram.com/theprodcastt?igshid=fhnfyehpkcc2">
-                            <i class="fab fa-instagram"></i>
+                            <!-- <i class="fab fa-instagram"></i> -->
+                            <img src="assets/img/landing/insta.svg">
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 mt-4 mt-lg-0">
-                    <h2 class="layout-title">Navigation</h2>
+                <div class="col-12 col-lg-3 mt-4 mt-lg-0 ml-md-5 pl-md-5 d-none d-md-block">
+                    <h2 class="layout-title text-light">Navigation</h2>
                     <ul class="list-group list-group-flush site-nav">
-                        <li class="list-group-item px-0 border-bottom-0"><a
-                                class="nav-item nav-link pl-0 text-dark text-decoration-none"
+                        <li class="list-group-item bg-dark px-0 py-0 border-bottom-0"><a
+                                class="nav-item nav-link pl-0 text-light text-decoration-none"
                                 href="#page-podcasts">Podcasts</a></li>
-                        <li class="list-group-item px-0 border-bottom-0"><a
-                                class="nav-item nav-link pl-0 text-dark text-decoration-none"
+                        <li class="list-group-item bg-dark px-0 py-0 border-bottom-0"><a
+                                class="nav-item nav-link pl-0 text-light text-decoration-none"
+                                href="#page-jobs">Jobs</a>
+                        </li>
+                        <li class="list-group-item bg-dark px-0 py-0 border-bottom-0"><a
+                                class="nav-item nav-link pl-0 text-light text-decoration-none"
                                 href="#page-blogs">Blogs</a></li>
-                        <!-- <li class="list-group-item px-0 border-bottom-0"><a
+                        <!-- <li class="list-group-item bg-dark px-0 py-0 border-bottom-0"><a
                                 class="nav-item nav-link pl-0 text-dark text-decoration-none"
                                 href="#page-videos">Videos</a></li> -->
-                        <li class="list-group-item px-0 border-bottom-0"><a
+                        <!-- <li class="list-group-item bg-dark px-0 py-0 border-bottom-0"><a
                                 class="nav-item nav-link pl-0 text-dark text-decoration-none" href="#page-contact">Reach
-                                Out</a></li>
-                        <!-- <li class="list-group-item px-0 border-bottom-0"><a
+                                Out</a></li> -->
+                        <!-- <li class="list-group-item bg-dark px-0 py-0 border-bottom-0"><a
                                 class="nav-item nav-link pl-0 text-dark text-decoration-none"
                                 href="#page-events">Events</a></li>
                         <li class="list-group-item px-0 border-bottom-0"><a
@@ -571,10 +768,10 @@
                     </ul>
                 </div>
                 <div class="col-12 col-lg-4 mt-4 mt-lg-0">
-                    <h2 class="layout-title ">Get all the latest updates</h2>
-                    <div class="input-group input-group-lg">
+                    <h2 class="layout-title text-light">Get all <br> the latest <br> updates</h2>
+                    <div class="input-group input-group-md">
                         <input type="email" class="form-control" aria-label="Sizing example input"
-                            placeholder="your email here" aria-describedby="inputGroup-sizing-lg">
+                            placeholder="your email here" aria-describedby="inputGroup-sizing-md">
                         <div class="input-group-append">
                             <button class="btn btn-tango" type="button"><i class="fa fa-arrow-right"></i></button>
                         </div>
@@ -602,7 +799,23 @@
     <script src="assets/lib/popper/1.14.6/js/popper.min.js"></script>
     <script src="assets/lib/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script async defer src="assets/lib/fontawesome/5.6.3/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script type="text/javascript" src="https://zc1.maillist-manage.in/js/optin.min.js"
+        onload="setupSF('sf33a841a2113c5ecaecdf2d32710c768544b5077c3a9b178f','ZCFORMVIEW',false,'light',false,'0')"></script>
     <script src="assets/js/default/app.js"></script>
+    <!--Zoho Campaigns Web-Optin Form's Header Code Starts Here-->
+
+    <script type="text/javascript">
+
+        function runOnFormSubmit_sf33a841a2113c5ecaecdf2d32710c768544b5077c3a9b178f(th) {
+
+            /*Before submit, if you want to trigger your event, "include your code here"*/
+
+        };
+
+    </script>
+
+    <!--Zoho Campaigns Web-Optin Form's Header Code Ends Here-->
 </body>
 
 </html>
