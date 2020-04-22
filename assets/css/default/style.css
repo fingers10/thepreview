@@ -71,7 +71,7 @@ body {
 }
 
 .site-header {
-  background: url(../../img/landing/hero3.jpg);
+  /* background: url(../../img/landing/hero3.jpg); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,13 +136,13 @@ body {
   margin-bottom: 1.563rem;
 }
 
-#page-blogs .card .card-img-top {
+.glider .card .card-img-top {
   height: 280px;
   width: auto;
   object-fit: cover;
 }
 
-#page-blogs .card-title {
+.glider .card-title {
   font-size: 1.125rem;
 }
 
