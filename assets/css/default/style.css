@@ -71,7 +71,7 @@ body {
 }
 
 .site-header {
-  background: url(../../img/landing/hero3.jpg);
+  /* background: url(../../img/landing/hero3.jpg); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,11 +136,13 @@ body {
   margin-bottom: 1.563rem;
 }
 
-#page-blogs .card .card-img-top {
+.glider .card .card-img-top {
   height: 280px;
+  width: auto;
+  object-fit: cover;
 }
 
-#page-blogs .card-title {
+.glider .card-title {
   font-size: 1.125rem;
 }
 
@@ -496,12 +498,15 @@ input[type="email"]::placeholder {
 } */
 
 /* // Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) {
-  .embed-responsive-4by3::before {
+@media (min-width: 1200px) {
+  /* .embed-responsive-4by3::before {
     padding-top: 58%;
   }
 
   .embed-responsive-1by1::before {
     padding-top: 58%;
+  } */
+  .width-25 {
+    width: 25% !important;
   }
-} */
+}
