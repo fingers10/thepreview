@@ -509,4 +509,8 @@ input[type="email"]::placeholder {
   .width-25 {
     width: 25% !important;
   }
+  
+  .width-30 {
+    width: 30% !important;
+  }
 }
