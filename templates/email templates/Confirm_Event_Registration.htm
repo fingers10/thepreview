@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Confirmation</title>
+    <style type="text/css">
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #ec7727;
+            color: white;
+        }
+
+        .ticket {
+            position: relative;
+            box-sizing: border-box;
+            width: 300px;
+            height: 450px;
+            margin: 10px auto 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: #FBFBFB;
+            box-shadow: 2px 2px 15px 0px #AB9B0D;
+        }
+
+        .ticket:before,
+        .ticket:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            height: 6px;
+            width: 290px;
+        }
+
+        .ticket:before {
+            top: -5px;
+            background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100%) -7px -8px/16px 16px repeat-x;
+        }
+
+        .ticket:after {
+            bottom: -5px;
+            background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100%) -7px -2px/16px 16px repeat-x;
+        }
+
+        .ticket__content {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            border: 6px solid #D8D8D8;
+        }
+
+        .ticket__text {
+            width: auto;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            /* font-size: 3rem; */
+            /* font-weight: 900; */
+            text-transform: uppercase;
+            text-align: center;
+            color: black;
+            /* transform: translate(-25px, 25px) rotate(-55deg); */
+        }
+    </style>
+</head>
+
+<body>
+    <p>Dear {0},</p>
+
+    <p>Thank you for registering for The Prodcast Event - {1}.</p>
+
+    <p>Here is your pass to the event. You're requested to show this pass to get access to our event.</p>
+
+    <section class="ticket">
+        <section class="ticket__content">
+            <p class="ticket__text">{2}<br />{3}<br/>{4}<br/>Valid only on {5}</p>
+        </section>
+    </section>
+
+    <p>Thanks,<br />
+        The Prodcast
+    </p>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; overflow-x: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Confirmation</title>
+    
+</head>
+
+<body style="color: white; background-color: #ec7727;">
+    <p>Dear {0},</p>
+
+    <p>Thank you for registering for The Prodcast Event - {1}.</p>
+
+    <p>Here is your pass to the event. You're requested to show this pass to get access to our event.</p>
+
+    <section class="ticket" style="position: relative; box-sizing: border-box; width: 300px; height: 450px; margin: 10px auto 0; padding: 20px; border-radius: 10px; background: #FBFBFB; box-shadow: 2px 2px 15px 0px #AB9B0D;">
+        <section class="ticket__content" style="box-sizing: border-box; height: 100%; width: 100%; border: 6px solid #D8D8D8;">
+            <p class="ticket__text" style="width: auto; font-family: 'Helvetica', 'Arial', sans-serif; text-transform: uppercase; text-align: center; color: black;">{2}<br>{3}<br>{4}<br>Valid only on {5}</p>
+        </section>
+    </section>
+
+    <p>Thanks,<br>
+        The Prodcast
+    </p>
+
+</body>
+
+</html>
