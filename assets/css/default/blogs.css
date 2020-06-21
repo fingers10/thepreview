@@ -6,11 +6,11 @@
   height: 60vh;
 }
 
-.post-image,
+/* .post-image,
 .post-list blockquote,
 .post-video {
   margin-bottom: 1.875rem
-}
+} */
 
 .post-image-cover {
   position: relative;
