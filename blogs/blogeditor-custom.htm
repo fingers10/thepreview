@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Editor Sample</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans%3A300,400,600,700" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            width: 100%;
+        }
+
+        body {
+            padding: 25px;
+        }
+
+        #editor-container {
+            border: 1px solid #ccc;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            font-size: 1.2em;
+            height: 200px;
+            margin: 0 auto;
+            width: 450px;
+        }
+
+        #editor-container h1+p,
+        #editor-container h2+p {
+            margin-top: 0.5em;
+        }
+
+        #editor-container blockquote {
+            border-left: 4px solid #111;
+            padding-left: 1em;
+        }
+
+        #editor-container hr {
+            border: none;
+            color: #111;
+            letter-spacing: 1em;
+            text-align: center;
+        }
+
+        #editor-container hr:before {
+            content: '...';
+        }
+
+        #tooltip-controls,
+        #sidebar-controls {
+            text-align: center;
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 18px;
+            padding: 0;
+            height: 32px;
+            width: 32px;
+            text-align: center;
+        }
+
+        button:active,
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tooltip-controls">
+        <button id="bold-button"><i class="fa fa-bold"></i></button>
+        <button id="italic-button"><i class="fa fa-italic"></i></button>
+        <button id="link-button"><i class="fa fa-link"></i></button>
+        <button id="blockquote-button"><i class="fa fa-quote-right"></i></button>
+        <button id="header-1-button"><i class="fa fa-header"><sub>1</sub></i></button>
+        <button id="header-2-button"><i class="fa fa-header"><sub>2</sub></i></button>
+    </div>
+    <div id="sidebar-controls">
+        <button id="image-button"><i class="fa fa-camera"></i></button>
+        <button id="video-button"><i class="fa fa-play"></i></button>
+        <button id="tweet-button"><i class="fa fa-twitter"></i></button>
+        <button id="divider-button"><i class="fa fa-minus"></i></button>
+    </div>
+    <div id="editor-container">Tell your story...</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.core.js"></script>
+</body>
+
+<script type="text/javascript">
+    let Inline = Quill.import('blots/inline');
+    let Block = Quill.import('blots/block');
+    let BlockEmbed = Quill.import('blots/block/embed');
+
+    class BoldBlot extends Inline { }
+    BoldBlot.blotName = 'bold';
+    BoldBlot.tagName = 'strong';
+
+    class ItalicBlot extends Inline { }
+    ItalicBlot.blotName = 'italic';
+    ItalicBlot.tagName = 'em';
+
+    class LinkBlot extends Inline {
+        static create(url) {
+            let node = super.create();
+            node.setAttribute('href', url);
+            node.setAttribute('target', '_blank');
+            return node;
+        }
+
+        static formats(node) {
+            return node.getAttribute('href');
+        }
+    }
+
+    LinkBlot.blotName = 'link';
+    LinkBlot.tagName = 'a';
+
+    class BlockquoteBlot extends Block { }
+    BlockquoteBlot.blotName = 'blockquote';
+    BlockquoteBlot.tagName = 'blockquote';
+
+    class HeaderBlot extends Block {
+        static formats(node) {
+            return HeaderBlot.tagName.indexOf(node.tagName) + 1;
+        }
+    }
+
+    HeaderBlot.blotName = 'header';
+    HeaderBlot.tagName = ['H1', 'H2'];
+
+    class DividerBlot extends BlockEmbed { }
+    DividerBlot.blotName = 'divider';
+    DividerBlot.tagName = 'hr';
+
+    class ImageBlot extends BlockEmbed {
+        static create(value) {
+            let node = super.create();
+            node.setAttribute('alt', value.alt);
+            node.setAttribute('src', value.url);
+            return node;
+        }
+
+        static value(node) {
+            return {
+                alt: node.getAttribute('alt'),
+                url: node.getAttribute('src')
+            };
+
+        }
+    }
+
+    ImageBlot.blotName = 'image';
+    ImageBlot.tagName = 'img';
+
+    class VideoBlot extends BlockEmbed {
+        static create(url) {
+            let node = super.create();
+            node.setAttribute('src', url);
+            node.setAttribute('frameborder', '0');
+            node.setAttribute('allowfullscreen', true);
+            return node;
+        }
+
+        static formats(node) {
+            let format = {};
+            if (node.hasAttribute('height')) {
+                format.height = node.getAttribute('height');
+            }
+            if (node.hasAttribute('width')) {
+                format.width = node.getAttribute('width');
+            }
+            return format;
+        }
+
+        static value(node) {
+            return node.getAttribute('src');
+        }
+
+        format(name, value) {
+            if (name === 'height' || name === 'width') {
+                if (value) {
+                    this.domNode.setAttribute(name, value);
+                } else {
+                    this.domNode.removeAttribute(name, value);
+                }
+            } else {
+                super.format(name, value);
+            }
+        }
+    }
+
+    VideoBlot.blotName = 'video';
+    VideoBlot.tagName = 'iframe';
+
+    class TweetBlot extends BlockEmbed {
+        static create(id) {
+            let node = super.create();
+            node.dataset.id = id;
+            twttr.widgets.createTweet(id, node);
+            return node;
+        }
+
+        static value(domNode) {
+            return domNode.dataset.id;
+        }
+    }
+
+    TweetBlot.blotName = 'tweet';
+    TweetBlot.tagName = 'div';
+    TweetBlot.className = 'tweet';
+
+    Quill.register(BoldBlot);
+    Quill.register(ItalicBlot);
+    Quill.register(LinkBlot);
+    Quill.register(BlockquoteBlot);
+    Quill.register(HeaderBlot);
+    Quill.register(DividerBlot);
+    Quill.register(ImageBlot);
+    Quill.register(TweetBlot);
+    Quill.register(VideoBlot);
+
+    let quill = new Quill('#editor-container');
+
+    $('#bold-button').click(function () {
+        quill.format('bold', true);
+    });
+    $('#italic-button').click(function () {
+        quill.format('italic', true);
+    });
+
+    $('#link-button').click(function () {
+        let value = prompt('Enter link URL');
+        quill.format('link', value);
+    });
+
+    $('#blockquote-button').click(function () {
+        quill.format('blockquote', true);
+    });
+
+    $('#header-1-button').click(function () {
+        quill.format('header', 1);
+    });
+
+    $('#header-2-button').click(function () {
+        quill.format('header', 2);
+    });
+
+    $('#divider-button').click(function () {
+        let range = quill.getSelection(true);
+        quill.insertText(range.index, '\n', Quill.sources.USER);
+        quill.insertEmbed(range.index + 1, 'divider', true, Quill.sources.USER);
+        quill.setSelection(range.index + 2, Quill.sources.SILENT);
+    });
+
+    $('#image-button').click(function () {
+        let range = quill.getSelection(true);
+        quill.insertText(range.index, '\n', Quill.sources.USER);
+        quill.insertEmbed(range.index + 1, 'image', {
+            alt: 'Quill Cloud',
+            url: 'https://quilljs.com/0.20/assets/images/cloud.png'
+        },
+            Quill.sources.USER);
+        quill.setSelection(range.index + 2, Quill.sources.SILENT);
+    });
+
+    $('#video-button').click(function () {
+        let url = prompt('Enter video link');
+        let range = quill.getSelection(true);
+        quill.insertText(range.index, '\n', Quill.sources.USER);
+        //let url = 'https://www.youtube.com/embed/QHH3iSeDBLo?showinfo=0';
+        quill.insertEmbed(range.index + 1, 'video', url, Quill.sources.USER);
+        quill.formatText(range.index + 1, 1, { height: '170', width: '400' });
+        quill.setSelection(range.index + 2, Quill.sources.SILENT);
+    });
+
+    $('#tweet-button').click(function () {
+        let range = quill.getSelection(true);
+        let id = '464454167226904576';
+        quill.insertText(range.index, '\n', Quill.sources.USER);
+        quill.insertEmbed(range.index + 1, 'tweet', id, Quill.sources.USER);
+        quill.setSelection(range.index + 2, Quill.sources.SILENT);
+    });
+</script>
+
+</html>
